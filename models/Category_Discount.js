@@ -1,10 +1,11 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// Create a new Sequelize model for category.
-class User extends Model {}
+// Create a new Sequelize model for discounts offered on category.
+class Category_Discount extends Model {}
 
-User.init(
+Category_Discount.init(
+
   {
     id: {
       type: DataTypes.INTEGER,
@@ -12,21 +13,18 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    username: {
-        type: DataTypes.STRING
-      },
-    password: {
+    name: {
       type: DataTypes.STRING
     },
-    first_name: {
-      type: DataTypes.STRING
+    duration_weeks: {
+      type: DataTypes.INTEGER
     },
-    last_name: {
-        type: DataTypes.STRING
-      },
-      phone_number: {
-        type: DataTypes.INTEGER
-      },
+    discount_percent: {
+      type: DataTypes.DECIMAL
+    },
+    active: {
+      type: DataTypes.BOOLEAN
+    }
   },
   {
     // Link to database connection
@@ -35,8 +33,8 @@ User.init(
     timestamps: false,
     underscored: true,
     freezeTableName : true,
-    modelName: 'user'
+    modelName: 'category_discount'
   }
 );
 
-module.exports = User;
+module.exports = Category_Discount;

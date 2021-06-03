@@ -5,6 +5,17 @@ const session = require("express-session");
 const exhbs = require("express-handlebars");
 // the routes we called ./container and they were holding an empty file
 const routes = require("./routes");
+//Importing sequelize model to sync tables with database.
+const category_discount = require('./models/Category_Discount');
+const category = require('./models/Category');
+const product = require('./models/Product');
+const user = require('./models/User');
+const order = require('./models/Order');
+const order_item = require('./models/Order_Item');
+const address = require('./models/Address');
+const product_cart = require('./models/Product_Cart');
+const cart = require('./models/Cart');
+
 
 // TODO: CREATE THE PATH
 // please dont import modules or directories if they dont exist
@@ -17,7 +28,7 @@ const sequelize = require("./config/connection");
 const sequelizeStore = require("connect-session-sequelize")(session.Store);
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5001;
 
 // if using handlebars helpers, please define the helper...
 const hbs = exhbs.create({ helpers });

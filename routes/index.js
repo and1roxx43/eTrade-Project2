@@ -51,4 +51,16 @@ router.get("/signUp", (req, res) => {
   res.render("signUp");
 });
 
+router.get("/track-order", (req, res) => {
+    res.render("track-order");
+});
+
+router.get("/login", (req, res) =>{
+    if(req.session.loggedIn){
+        res.redirect("/");
+        return;
+    }
+    res.render('login');
+});
+
 module.exports = router;
