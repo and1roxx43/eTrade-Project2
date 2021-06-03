@@ -26,15 +26,29 @@ router.get("/customer-support", (req, res) => {
 });
 
 router.get("/mens", (req, res) => {
-    res.render("mens");
+  res.render("mens");
 });
 
 router.get("/womens", (req, res) => {
-    res.render("womens");
+  res.render("womens");
 });
 
 router.get("/kids", (req, res) => {
-    res.render("kids");
+  res.render("kids");
+});
+
+router.get("/login", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    alert("You're already signed in!");
+    return;
+  } else {
+    res.render("login");
+  }
+});
+
+router.get("/signUp", (req, res) => {
+  res.render("signUp");
 });
 
 module.exports = router;
