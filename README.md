@@ -46,7 +46,6 @@ ___
 Must have these programs installed on computer to run code:
 
 - Node
-- NPM
 - MySQL
 - MySQL Workbench
 
