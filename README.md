@@ -95,5 +95,5 @@ GitHub: [sharonealex](https://github.com/sharonealex) <br>
 
 ___
 ### URL:
-Heroku: https://etrade-project2.herokuapp.com/eTrade
+Heroku: https://etrade-project2.herokuapp.com/eTrade <br>
 GitHub: https://github.com/and1roxx43/eTrade-Project2
